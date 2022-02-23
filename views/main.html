@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To_Do_List</title>
+    <style>
+        table { border: 1px solid black; border-collapse: collapse; }
+        table th, table td { border: 1px solid black; }
+    </style>
+</head>
+<body>
+    <h1 id="title">To_Do_List</h1>
+    <input type="button" id="day" value="day"
+    onclick="
+    document.querySelector('body').style.color = 'black'
+    document.querySelector('body').style.backgroundColor = 'white'
+    ">
+    <input type="button" id="night" value="night"
+    onclick="
+    document.querySelector('body').style.color = 'white'
+    document.querySelector('body').style.backgroundColor = 'black'
+    ">
+    <div>
+        <form id="user-form" method="post">
+            <fieldset>
+                <legend>User Enrollment</legend>
+                <div><input type="text" id="username" placeholder="name"></div>
+                <button type="submit">submit</button>
+            </fieldset>
+        </form>
+    </div>
+    <table class="user-list">
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>NAME</th>
+        </tr>
+        </thead>
+        <tbody class="user-list">
+          <tr>
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+          </tr>
+        </tbody>
+    </table>
+    <br>
+    <div>
+        <form id="todolist-form" method="post">
+            <fieldset>
+              <legend>What To Do?</legend>
+              <div><input id="userid" type="text" placeholder="id"></div>
+              <div><input id="todo" type="text" placeholder="to do"></div>
+              <button type="submit">submit</button>
+            </fieldset>
+        </form>
+    </div>
+    <table class="todo-list">
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>NAME</th>
+          <th>TO_DO</th>
+        </tr>
+        </thead>
+        <tbody class="todo-list">
+          <tr>
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.age}}</td>
+          </tr>
+        </tbody>
+    </table>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/main.js"></script>
+</body>
+</html>
