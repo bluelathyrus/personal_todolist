@@ -35,6 +35,7 @@ router.get('/:id/lists', async(req, res, next) => {
                 where: { id: req.params.id },
             },
         })
+        res.json(lists)
     } catch (err) {
         console.error(err)
         next(err)
